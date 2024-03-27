@@ -80,8 +80,12 @@ def _build_group_prices_dict(
         group_prices_dict[price_rate_code].append(price)
 
 
-def problem_one_run() -> List[BestGroupPrice]:
+def problem_one_run() -> None:
     # Wrapper function to run the problem with sample data.
-    return get_best_group_prices(
+    for solution in get_best_group_prices(
         rates=get_input_rates(), prices=get_input_cabin_prices()
-    )
+    ):
+        print(solution)
+
+if __name__ == '__main__':
+    problem_one_run()

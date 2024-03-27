@@ -1,1 +1,2 @@
-from solutions.problem_one import *
+from solutions.problem_one import problem_one_run
+from solutions.problem_two import problem_two_run

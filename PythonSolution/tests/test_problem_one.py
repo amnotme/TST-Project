@@ -1,4 +1,3 @@
-from models import Rate, CabinPrice, BestGroupPrice
 from solutions import *
 from unittest import TestCase
 

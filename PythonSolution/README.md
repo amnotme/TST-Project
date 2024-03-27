@@ -17,5 +17,25 @@ def get_best_group_prices(
     rates: List[Rate], 
     prices: List[CabinPrice]
 ) -> List[BestGroupPrice] :
-
 ```
+2. On startup, your program should run the following sample data through your function and output the sequence of BestGroupPrices.
+
+## Problem 2
+
+**Background**: Cruise bookings can have one or more Promotions applied to them. But sometimes a Promotion cannot be combined with another Promotion. Our application has to find out all possible Promotion Combinations that can be applied together.
+
+1. Implement a function to find all PromotionCombos with maximum number of combinable promotions in each. The function and case class definitions are supplied below to get you started.
+```python
+def all_combinable_promotions(
+    all_promotions: List[Promotion],
+) -> List[PromotionCombo]:
+```
+2. Implement a function to find all PromotionCombos for a given Promotion from given list of Promotions. The function definition is provided. 
+```python
+def combinable_promotions(
+    promotion_code: str,
+    all_promotions: List[PromotionCombo],
+) -> List[PromotionCombo]:
+```
+3. On startup your program should run through the following sample data and output the sequence of PromotionCombos.
+
