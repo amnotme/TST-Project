@@ -39,3 +39,58 @@ def combinable_promotions(
 ```
 3. On startup your program should run through the following sample data and output the sequence of PromotionCombos.
 
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Python 3.10 or higher
+- pip (Python package installer)
+
+### Installing
+
+A step by step series of examples that tell you how to get a development environment running:
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/amnotme/TST-Project.git
+cd TST-Project/PythonSolution
+```
+2. **Set up a virtual environment**
+
+```bash
+# Mac
+python3 -m venv env
+source env/bin/activate
+
+# Win
+python -m venv env
+.\env\Scripts\activate
+```
+
+3. **Install required packages**
+
+```bash
+pip install -r requirements.txt
+```
+4. **Running Solutions**
+
+```bash
+# all
+python main.py
+```
+
+5. **Running Tests**
+```bash
+# You can run all of the at once when at root TST-Project/PythonSolution
+pytest
+# individually
+pytest tests/test_problem_one.py
+pytest tests/test_problem_two.py
+
+
+```
