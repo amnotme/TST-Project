@@ -1,5 +1,7 @@
-from solutions import *
+from models import CabinPrice, Rate, BestGroupPrice
 from unittest import TestCase
+
+from solutions.problem_one import get_best_group_prices
 
 
 class TestProblemOne(TestCase):
