@@ -43,7 +43,7 @@ def _get_maximal_combinations(
 def _is_combination_valid(combos: Tuple[Promotion]) -> bool:
     # Check if a given combination of promotions is valid (i.e., all promotions can be combined).
     # 1. It iterates through a tuple of possible combinations and checks that:
-    # 2.a PromoCode from isn't in any other not_combinable_with list from evey other Promotion
+    # 2.a PromoCode isn't in any other not_combinable_with list from evey other Promotion
     for i, promo in enumerate(combos):
         # Avoid comparing a promotion with itself and ensure each pair is checked only once.
         for promo_two in combos[i + 1:]:
@@ -57,12 +57,12 @@ def _is_combination_valid(combos: Tuple[Promotion]) -> bool:
 
 def combinable_promotions(
     promotion_code: str,
-    all_promotions: List[PromotionCombo],
+    all_promotions: List[Promotion],
 ) -> List[PromotionCombo]:
-    # 1. Given a list of PromotionCombos, it returns a list of filtered PromotionCombos that match the promotion_code
+    # 1. Given a list of Promotions, it returns a list of filtered PromotionCombos that match the promotion_code
     return [
         promotion
-        for promotion in all_promotions
+        for promotion in all_combinable_promotions(all_promotions)
         if promotion_code in promotion.promotion_codes
     ]
 
@@ -76,12 +76,12 @@ def problem_two_run() -> None:
         print(f"{all_combinable_promotions.__name__}  =>", solution)
 
     for solution in combinable_promotions(
-        promotion_code="P1", all_promotions=all_combinable_promotions_solution
+        promotion_code="P1", all_promotions=get_input_promotions()
     ):
         print(f"{combinable_promotions.__name__} 'P1' =>", solution)
 
     for solution in combinable_promotions(
-        promotion_code="P3", all_promotions=all_combinable_promotions_solution
+        promotion_code="P3", all_promotions=get_input_promotions()
     ):
         print(f"{combinable_promotions.__name__} 'P3' =>", solution)
 
