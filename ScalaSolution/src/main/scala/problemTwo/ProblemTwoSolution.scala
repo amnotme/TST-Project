@@ -60,7 +60,7 @@ object ProblemTwoSolution {
 }
 
 
-object RunProblemTwo extends App {
+object RunProblemTwo {
   def problemTwoRun: Unit =
     val allCombinations = allCombinablePromotions(
       allPromotions = getInputPromotions
@@ -79,6 +79,4 @@ object RunProblemTwo extends App {
     for (result <- Seq(allCombinations, combinable_solution_one, combinable_solution_two)) {
       result.foreach(println)
     }
-
-  problemTwoRun
 }

@@ -27,7 +27,7 @@ object ProblemOneSolution {
 }
 
 
-object RunProblemOne extends App {
+object RunProblemOne {
 
   def problemOneRun: Unit =
     val result = getBestGroupPrices(
@@ -38,6 +38,4 @@ object RunProblemOne extends App {
     for {
       res <- result
     } yield println(res)
-
-  problemOneRun
 }
